@@ -1,6 +1,6 @@
 const feedbacks = document.querySelector('.feedbacks');
 const feedbackKey = 'feedback';
-window.onload = start();
+window.addEventListener('load', start());
 
 
 function start(){
@@ -35,7 +35,7 @@ function createFeedbackCards(data){
         const header = document.createElement('h2');
         header.textContent = iterator.product; 
         divEl.appendChild(header);  
-        createFeedbackList(divEl, iterator.feedback, iterator.product);           
+        createFeedbackList(divEl, iterator.feedback, iterator.product, 'none');           
     }
 }
 
@@ -66,10 +66,7 @@ function createFeedbackList(divEl, feedbackArr, product){
             }
             else{
                 localStorage.setItem(feedbackKey, JSON.stringify(arrayFeed)); 
-                olEl.innerHTML = '';
-                buttonFeed.remove();
-                createFeedbackList(divEl, objFeedback.feedback, product);  
-                olEl.style.display = 'block';
+                liEl.remove();
             }
             checkStorage();
         });
