@@ -1,0 +1,29 @@
+.formCreate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.feedbacks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.card{
+    border: 1px solid black;
+    margin: 10px;
+    padding: 20px;
+}
+
+.deleteButton{
+    border: none;
+    background-color: #fff;
+}
+
+.deleteButton:hover{
+    cursor: pointer;
+    color: blueviolet;
+}
